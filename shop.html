@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLO Gas Checkout</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  header {
+      background-color: #14213d;
+      color: white;
+      width: 100%;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 24px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .left-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .right-section {
+    background: #f1f8f4;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .checkout-btn {
+    background: #356b37;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .order-summary {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .order-summary h3 {
+    margin-bottom: 15px;
+  }
+  .summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  .seller-buttons {
+    margin-top: 15px;
+  }
+  .seller-buttons button {
+    background: #e5f5e7;
+    padding: 10px;
+    border: none;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .payment-btn {
+    background: #356b37;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FLO Gas</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="left-section">
+      <h2>Refill Details</h2>
+      <div class="form-group">
+        <label for="date">Re-fill Date</label>
+        <input type="date" id="date">
+      </div>
+      <div class="form-group">
+        <label for="size">Size</label>
+        <input type="text" id="size" placeholder="Enter gas size">
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+      </div>
+      <div class="form-group">
+        <label for="method">Method</label>
+        <input type="text" id="method" placeholder="Payment method">
+      </div>
+      <button class="checkout-btn">Checkout</button>
+
+      <div class="seller-buttons">
+        <p>Only 12 units available nearby. Please select the seller:</p>
+        <button>Seller 1</button>
+        <button>Seller 2</button>
+        <button>Seller 3</button>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span>Rs. 3500.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery</span>
+          <span>Rs. 300.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Tax</span>
+          <span>Rs. 200.00</span>
+        </div>
+        <div class="summary-line">
+          <strong>Total</strong>
+          <strong>Rs. 4000.00</strong>
+        </div>
+      </div>
+      <a href="#" class="payment-btn">Continue to Payment</a>
+    </div>
+  </div>
+</body>
+</html>
